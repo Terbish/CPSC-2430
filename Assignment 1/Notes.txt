@@ -1,0 +1,29 @@
+add("dog", "kota")
+add("cat", "milo")
+add("dog", "cooper")
+add("dog", ")
+add("cat")
+
+
+get ("dog") -> 
+retrieve the first dog input to the system
+retrieve kota
+delete kota
+
+get("any")
+retrieve first any animal
+
+get("cat")
+
+
+get("cat")
+return no cat
+
+add("cat", "matt")
+
+get("cat")
+return matt
+
+
+use queue to implement
+using one queue to store names, another to store type
