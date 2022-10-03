@@ -35,7 +35,7 @@ class Box
 {
 public:
     int length, width, height;
-
+    
     void AddBox();
 };
 
@@ -86,7 +86,7 @@ void Box::AddBox(){
     }
 }
 
-bool Palidrome(){
+bool Palindrome(){
     string str;
     cout << "Please enter your text:\n";
     cin >> str;
@@ -94,9 +94,11 @@ bool Palidrome(){
     {
         if (str[i] != str[str.length()- i - 1]) // compare each element of the string to the its positional counter part
         {
-            return false;
+            cout << "0";
+            return 0;
         }
-        return true;
+        cout << "1";
+        return 1;
     }
 }
 
@@ -107,6 +109,6 @@ int main(){
     Box NewBox;
     NewBox.AddBox();
 
-    Palidrome();
+    Palindrome();
     return 0;
 }
