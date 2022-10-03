@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
+#include <string>
 using namespace std;
 
 void GradeConverter(){
@@ -86,28 +86,26 @@ void Box::AddBox(){
     }
 }
 
-void Palidrome(){
-    string str, reverseStr;
+bool Palidrome(){
+    string str;
     cout << "Please enter your text:\n";
     cin >> str;
-    reverseStr = str;
-
-    // vector<char> v(str.begin(), str.end());
-    reverse(reverseStr.begin(), reverseStr.end());
-    if (str == reverseStr)
+    for (int i = 0; i < str.length() / 2 ; i++) //iterate i till half way through the string
     {
-        cout << '1';
-    } else{
-        cout << '0';
+        if (str[i] != str[str.length()- i - 1]) // compare each element of the string to the its positional counter part
+        {
+            return false;
+        }
+        return true;
     }
 }
 
 
 int main(){
-    // GradeConverter();
+    GradeConverter();
 
-    // Box NewBox;
-    // NewBox.AddBox();
+    Box NewBox;
+    NewBox.AddBox();
 
     Palidrome();
     return 0;
