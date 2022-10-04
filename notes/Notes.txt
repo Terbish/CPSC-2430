@@ -1,0 +1,13 @@
+Each .cpp file is a compilation unit
+
+main.cpp included iostream and add.h
+add.cpp include add.h
+
+main.cpp compile into main.object file
+
+add .cpp compile into add.object
+
+main.o and add .o combine into an executrable
+
+
+increase reuseablity of the program by separating all the functions

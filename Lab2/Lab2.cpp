@@ -82,7 +82,7 @@ void Box::AddBox(){
     cout << "Length\tWidth\tHeight" << endl;
     for (int i = 0; i < 3; i++)
     {
-        std::cout << NewBox.at(i) << '\t';
+        std::cout << NewBox.at(i) << '\t\n';
     }
 }
 
@@ -94,21 +94,19 @@ bool Palindrome(){
     {
         if (str[i] != str[str.length()- i - 1]) // compare each element of the string to the its positional counter part
         {
-            cout << "0";
-            return 0;
+            return false;
         }
-        cout << "1";
-        return 1;
+        return true;
     }
 }
 
 
 int main(){
-    GradeConverter();
+    // GradeConverter();
 
-    Box NewBox;
-    NewBox.AddBox();
+    // Box NewBox;
+    // NewBox.AddBox();
 
-    Palindrome();
+    cout << Palindrome();
     return 0;
 }
