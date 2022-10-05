@@ -29,9 +29,9 @@ void GradeConverter(){
     {
         cout << 'A' << endl;
     }
-    else // error catching invalid input
+    else if(grade < 0 || grade > 100)  // error catching invalid input
     {
-        cout << "Invalid input. Input range 0 - 100";
+        cout << "Invalid input. Input range 0 - 100.\n";
     }
             
     
