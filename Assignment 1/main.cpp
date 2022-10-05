@@ -4,10 +4,9 @@ using namespace std;
 
 class Animals
 {
-private:
-    /* data */
 public:
-    
+    queue<string> Dogs;
+    queue<string> Cats;
 };
 
 
@@ -26,7 +25,9 @@ void addAnimal(){
 
     if (catDog == 1)
     {
-        
+        Dogs.push(animalName);
+    } else if (catDog == 2)
+    {    
+        Cats.push.(animalName);
     }
-    
 }
