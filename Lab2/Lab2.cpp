@@ -8,7 +8,8 @@ void GradeConverter(){
     cout << "Please input the grade:" << endl;
     cin >> grade;
 
-    if (grade <= 59)
+// if statement for each grade bracket
+    if (grade >= 0 && grade <= 59)
     {
         cout << 'F'<< endl;
     }
@@ -27,14 +28,19 @@ void GradeConverter(){
     else if (grade <= 100)
     {
         cout << 'A' << endl;
-    }        
+    }
+    else // error catching invalid input
+    {
+        cout << "Invalid input. Input range 0 - 100";
+    }
+            
     
 }
 
 class Box
 {
 public:
-    int length, width, height;
+    int length, width, height; //create 
     
     void AddBox();
 };
@@ -66,7 +72,7 @@ void Box::AddBox(){
     box_2.push_back(height);
 
 // Add Box Dimensions
-    for (int i = 0; i <= 1; i++){
+    for (int i = 0; i <= 1; i++){ // for loop to determin the L and W of the new box
             if (box_1.at(i) > box_2.at(i))
             {
                 NewBox.push_back(box_1.at(i));
@@ -74,15 +80,15 @@ void Box::AddBox(){
                 NewBox.push_back(box_2.at(i));
             }
         }
-    int newHeight = box_1.at(2) + box_2.at(2);
+    int newHeight = box_1.at(2) + box_2.at(2); // addition of the H of the new box
     NewBox.push_back(newHeight);
 
 // Output New Dimension
     cout << "The new dimension is: " << endl;
     cout << "Length\tWidth\tHeight" << endl;
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 3; i++) // cout LWH by interating through the vector
     {
-        std::cout << NewBox.at(i) << '\t\n';
+        std::cout << NewBox.at(i) << "\t\n";
     }
 }
 
@@ -92,7 +98,7 @@ bool Palindrome(){
     cin >> str;
     for (int i = 0; i < str.length() / 2 ; i++) //iterate i till half way through the string
     {
-        if (str[i] != str[str.length()- i - 1]) // compare each element of the string to the its positional counter part
+        if (str[i] != str[str.length()- i - 1]) // compare each element of the string to its positional counter part
         {
             return false;
         }
@@ -102,10 +108,10 @@ bool Palindrome(){
 
 
 int main(){
-    // GradeConverter();
+    GradeConverter();
 
-    // Box NewBox;
-    // NewBox.AddBox();
+    Box NewBox;
+    NewBox.AddBox();
 
     cout << Palindrome();
     return 0;
